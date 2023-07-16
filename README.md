@@ -1,8 +1,9 @@
 # FordOtosan_Internship
 Freespace Segmentation with Fully Convolutional Neural Network (FCNN)
-![machine-learning1-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/0e7d761b-5c6b-4e54-884f-dd4f2d64fbf0)
 * What is Machine Learning?
   It is a branch of artifical intelligence where computer systems learn and perform tasks by analyzing data and using their experiences.Machine learning algorithms and statistical models are used to analysze data,discover patterns,relationships and extract meaningful information.
+  ![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7bad2683-22c0-4261-a85a-f73181dfbf68)
+
 * What is Unsupervised vs Supervised learning difference?
 * What is Deep Learning?
   It is a subfield of machine learning that uses mathematical models called artificial neural networks to perform complex tasks.Deep learning methods automatically learn and interpret complex structures in data by leveraging datasets.
