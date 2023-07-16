@@ -2,7 +2,8 @@
 Freespace Segmentation with Fully Convolutional Neural Network (FCNN)
 * What is Machine Learning?
   It is a branch of artifical intelligence where computer systems learn and perform tasks by analyzing data and using their experiences.Machine learning algorithms and statistical models are used to analysze data,discover patterns,relationships and extract meaningful information.
-  ![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7bad2683-22c0-4261-a85a-f73181dfbf68)
+![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4080a23f-f029-46c6-8c6a-0ccb02e4c6f5)
+
 
 * What is Unsupervised vs Supervised learning difference?
 * What is Deep Learning?
