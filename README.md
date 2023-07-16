@@ -1,23 +1,11 @@
 # FordOtosan_Internship
 Freespace Segmentation with Fully Convolutional Neural Network (FCNN)
-Build
-1. In order to clone the repo to your local computer:  git clone <template_repo>
-2.  or directly download from the button (but it is not recommended.)
-3. (Optional) It is suggested to use virtual environment, in the root directory:
-    * create a virtual environment: python3 -m venv venv
-    * 
-    * activate the virtual environment: source venv/bin/activate
-    * 
-    * deactivate the virtual environment: deactivate
-    * 
-4. YOU HAVE TO BE IN THE ROOT DIRECTORY FOR THIS COMMANDS. 
-5. Install required libraries:  pip install -r requirements.txt
-6. 
-Project
-Click on this link for a video that briefly explains the difference between machine learning and deep learning. After watching this video please search and answer the following questions:
+![machine-learning1-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/0e7d761b-5c6b-4e54-884f-dd4f2d64fbf0)
 * What is Machine Learning?
+  It is a branch of artifical intelligence where computer systems learn and perform tasks by analyzing data and using their experiences.Machine learning algorithms and statistical models are used to analysze data,discover patterns,relationships and extract meaningful information.
 * What is Unsupervised vs Supervised learning difference?
 * What is Deep Learning?
+  It is a subfield of machine learning that uses mathematical models called artificial neural networks to perform complex tasks.Deep learning methods automatically learn and interpret complex structures in data by leveraging datasets.
 * What is Neural Network (NN)?
 * What is Convolution Neural Network (CNN)? Please give 2 advantages over NN.
 * What is segmentation task in NN? Is it supervised or unsupervised?
