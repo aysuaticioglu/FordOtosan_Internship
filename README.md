@@ -13,6 +13,10 @@ It is a branch of artifical intelligence where computer systems learn and perfor
 
 The main difference is whether the training data has labels or not. In supervised learning, the data includes inputs and corresponding labels. In unsupervised learning, the data is unlabeled, and the focus is on discovering structures and patterns within the data.
 
+![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/65ef8ba3-c77d-4bde-bb19-01a3047f243a)
+
+
+
 * What is Deep Learning?
 
 It is a subfield of machine learning that uses mathematical models called artificial neural networks to perform complex tasks.Deep learning methods automatically learn and interpret complex structures in data by leveraging datasets.
@@ -36,7 +40,10 @@ The classification task assigns input data to specific categories or classes.It 
 * Compare segmentation and classification in NN.
 
 Segmentation focuses on identifying regions or objects within data, while classification assigns data to predefined classes or categories. Segmentation is more detailed and deals with complex data structures, while classification is a more general task with simpler output.
-  
+
+<img width="401" alt="Adsız 4" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/ffa6e785-de41-46ae-88ac-58d7e7991dbc">
+
+
 * What is data and dataset difference?
 
 Data refers to any information or observations, while a dataset is a collection of organized data specifically used for training or evaluating machine learning models.
@@ -45,11 +52,26 @@ Data refers to any information or observations, while a dataset is a collection 
 
 In supervised learning, the dataset contains labeled data with inputs and corresponding labels. In unsupervised learning, the dataset consists of unlabeled data, and the algorithms aim to find patterns or structures within the data without predefined labels.
 
-Data Preprocessing
-Extracting Masks
+* Data Preprocessing
+
+
+  Extracting Masks
 
 
 * What is color space ?
+
+Color space refers to specific way of representing colors in a mathematical or visual model.It defines the range of colors that can be displayed or captured and provides a standardized system for encoding and interpreting colors.
+
 * What RGB stands for ?
+
+RGB stands for Red,Green and Blue.It is an additive color model in which colors are created by combining different intensities of red,green and blue prmary colors.RGB is widely useed in digital imaging and displays.
+
+
 * In Python, can we transform from one color space to another?
+
+Yes,in Python,we can transform images from one color space to another using various libraries and functions.Libraries like OpenCv an PIL(Python Imaging Library) provide functions and methods to convert between diffrent color spaces,such as RGB,HSV,CMYK and more.
+
+
 * What is the popular library for image processing?
+
+ One popular library for image processing in Python is OpenCV (Open Source Computer Vision Library). OpenCV provides a wide range of functions and algorithms for image manipulation, transformation, feature extraction, object detection, and more. It is widely used in computer vision and image processing applications.
