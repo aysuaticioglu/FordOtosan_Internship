@@ -55,4 +55,5 @@ Yes,in Python,we can transform images from one color space to another using vari
 
 
 <h3>What is the popular library for image processing?</h3>
+
 One popular library for image processing in Python is OpenCV (Open Source Computer Vision Library). OpenCV provides a wide range of functions and algorithms for image manipulation, transformation, feature extraction, object detection, and more. It is widely used in computer vision and image processing applications.
