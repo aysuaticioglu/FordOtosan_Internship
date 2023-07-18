@@ -33,7 +33,7 @@ for json_name in tqdm.tqdm(json_list):
 
     # Create an empty mask whose size is the same as the original image's size
 
-    mask = np.zeros((json_dict["size"]["height"], json_dict["size"]["width"]), dtype=np.uint16)
+    mask = np.zeros((json_dict["size"]["height"], json_dict["size"]["width"]), dtype=np.uint8)
     mask_path = os.path.join(MASK_DIR, json_name[:-9] + ".png")
 
     # For every objects
