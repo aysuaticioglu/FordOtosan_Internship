@@ -1,7 +1,7 @@
 import os
 
 # Path to jsons
-JSON_DIR = 'data/jsons'
+JSON_DIR = '../data/jsons'
 
 # Path to mask
 MASK_DIR  = '../data/masks'
@@ -14,7 +14,7 @@ if not os.path.exists(IMAGE_OUT_DIR):
     os.mkdir(IMAGE_OUT_DIR)
 
 # Path to original images
-IMAGE_DIR = 'data/images'
+IMAGE_DIR = '../data/images'
 
 
 # In order to visualize masked-image(s), change "False" with "True"
