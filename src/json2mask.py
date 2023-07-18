@@ -1,7 +1,8 @@
+
 import json
 import os
 import numpy as np
-import cv2
+import cv2 
 import tqdm
 from constant import JSON_DIR, MASK_DIR
 
@@ -32,21 +33,16 @@ for json_name in tqdm.tqdm(json_list):
 
     # Create an empty mask whose size is the same as the original image's size
 
-    #########################################
-    # CODE
-    #########################################
+    mask = np.zeros((json_dict["size"]["height"], json_dict["size"]["width"]), dtype=np.uint8)
+    mask_path = os.path.join(MASK_DIR, json_name[:-9] + ".png")
 
     # For every objects
     for obj in json_dict["objects"]:
         # Check the objects ‘classTitle’ is ‘Freespace’ or not.
         if obj['classTitle']=='Freespace':
-
-            #########################################
-            # CODE
-            #########################################
+            mask = cv2.fillPoly(mask, np.array([obj['points']['exterior']]), color=1)
 
     # Write mask image into MASK_DIR folder
+    cv2.imwrite(mask_path, mask.astype(np.uint8))
 
-        #########################################
-        # CODE
-        #########################################
+ 
