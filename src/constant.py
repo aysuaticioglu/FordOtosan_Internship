@@ -6,7 +6,7 @@ JSON_DIR = '../data/jsons'
 # Path to mask
 MASK_DIR  = '../data/masks'
 if not os.path.exists(MASK_DIR):
-    os.mkdirs(MASK_DIR)
+    os.makedirs(MASK_DIR)
 
 # Path to output images
 IMAGE_OUT_DIR = '../data/masked_images'
