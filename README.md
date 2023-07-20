@@ -58,7 +58,8 @@ Yes,in Python,we can transform images from one color space to another using vari
 
 One popular library for image processing in Python is OpenCV (Open Source Computer Vision Library). OpenCV provides a wide range of functions and algorithms for image manipulation, transformation, feature extraction, object detection, and more. It is widely used in computer vision and image processing applications.
 
-<h3>Json to Mask</h3>
+<h2>Json to Mask</h2>
+
 
 JSON files contain the exterior and interior point locations of the freespace (drivable area) class. With this information, we can create a mask image.
 Here's the JSON representation:
@@ -84,11 +85,27 @@ src=https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/31116
 
 <img width="900" alt="mask" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c558cd78-65a2-4ceb-8190-1e67b5eb1283">
 
-Here's the section with the codes;json2mask.py
+Here's the section with the codes;
+<a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/json2mask.py">json2mask.py</a>
 
+<h2>Mask on Image</h2>
 
+In this section, the masked areas are highlighted in green or another color. The masked regions correspond to pixels belonging to the "Freespace" class, which are obtained from JSON files. After overlaying these masked areas on the original images, specific regions of the images will be emphasized with the chosen color, such as green.
 
+The use of 50% opacity during this process helps to achieve a smoother and more transparent effect. This allows the masked areas to blend better with the original images. As a result, the masked regions are visualized in a way that harmonizes with the original images.
 
+Overall, this process aims to visually inspect the accuracy and appropriateness of the masks, by superimposing them on the original images and highlighting the relevant areas with the chosen color and opacity.
 
+Codes to add to the image by coloring the pixels determined as empty space and with 50% opacity:
+```python
+  cpy_image=image.copy();
+    image[mask==1,:]=(0,255,0)
+    opac_image=(image/2+cpy_image/2).astype(np.uint8)
+```
 
+<h4>Mask on image example;</h4>
+<img width="779" alt="Adsız 2" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/e1597a9e-e09b-4113-b1b9-0e5c55a16633">
+
+Here's the section with the codes;
+<a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/mask_on_image.py">mask_on_image.py</a>
 
