@@ -37,7 +37,7 @@ The classification task assigns input data to specific categories or classes.It 
 
 <h3>Compare segmentation and classification in NN.</h3>
 Segmentation focuses on identifying regions or objects within data, while classification assigns data to predefined classes or categories. Segmentation is more detailed and deals with complex data structures, while classification is a more general task with simpler output.
-
+<br>
 <img width="401" alt="Adsız 4" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/ffa6e785-de41-46ae-88ac-58d7e7991dbc">
 
 
@@ -88,9 +88,6 @@ mask = cv2.fillPoly(mask, np.array([obj['points']['exterior']]), color=1)
 src=https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/9438aa82-4c0f-45a4-bc63-81c72140180c)/>
 <img width="450" alt="Adsız 5" 
 src=https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/311162e4-c96b-4b8a-818a-8158d6baa981)/>
-
-
-
 <img width="900" alt="mask" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c558cd78-65a2-4ceb-8190-1e67b5eb1283">
 
 Here's the section with the codes;
