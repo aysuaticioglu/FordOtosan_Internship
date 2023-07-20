@@ -57,3 +57,38 @@ Yes,in Python,we can transform images from one color space to another using vari
 <h3>What is the popular library for image processing?</h3>
 
 One popular library for image processing in Python is OpenCV (Open Source Computer Vision Library). OpenCV provides a wide range of functions and algorithms for image manipulation, transformation, feature extraction, object detection, and more. It is widely used in computer vision and image processing applications.
+
+<h3>Json to Mask</h3>
+
+JSON files contain the exterior and interior point locations of the freespace (drivable area) class. With this information, we can create a mask image.
+Here's the JSON representation:
+
+
+<img width="434" alt="jsonfile" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2ec33c1d-7966-46b0-aaf1-18f36feafabe">
+
+The masks are created using these exterior and interior points. Masks are black and white images representing pixels. Pixels belonging to the "Freespace" class are represented as white (e.g., pixel value 255), while other pixels are represented as black (e.g., pixel value 0). This is done using the information from the JSON files.
+
+Masks were drawn using the Python cv2 library and the fillPoly function.
+```python
+mask = cv2.fillPoly(mask, np.array([obj['points']['exterior']]), color=1)
+```
+<h4>Mask example;</h4>
+
+
+<img width="450" alt="Adsız 6" 
+src=https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/9438aa82-4c0f-45a4-bc63-81c72140180c)/>
+<img width="450" alt="Adsız 5" 
+src=https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/311162e4-c96b-4b8a-818a-8158d6baa981)/>
+
+
+
+<img width="900" alt="mask" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c558cd78-65a2-4ceb-8190-1e67b5eb1283">
+
+Here's the section with the codes;json2mask.py
+
+
+
+
+
+
+
