@@ -1,6 +1,7 @@
 # FordOtosan_Internship
 <h1>Freespace Segmentation with Fully Convolutional Neural Network (FCNN)</h1>
 
+
 <h3>What is Machine Learning?</h3>
 It is a branch of artifical intelligence where computer systems learn and perform tasks by analyzing data and using their experiences.Machine learning algorithms and statistical models are used to analysze data,discover patterns,relationships and extract meaningful information.
 
