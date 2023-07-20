@@ -17,10 +17,17 @@ The main difference is whether the training data has labels or not. In supervise
  It is a subfield of machine learning that uses mathematical models called artificial neural networks to perform complex tasks.Deep learning methods automatically learn and interpret complex structures in data by leveraging datasets.
 
 <h3>What is Neural Network (NN)?</h3>
- It's a mathematical model that imitates the structure of the human brain. It uses interconnected artificial neurons to handle input data and generate outputs. Neural networks are widely used in machine learning.
+ It's a mathematical model that imitates the structure of the human brain. It uses interconnected artificial neurons to handle input data and generate outputs.Neural networks are widely used in machine learning.
+<br>
+<img width="300" alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f653aa46-0546-4a43-bd73-dee9f266c0fc">
+
 
 <h3>What is Convolution Neural Network (CNN)? Please give 2 advantages over NN.</h3>
 It is a special kind of neural network made for working with structured data,particularly images.CNNs are widely used in deep learning for tasks like sorting images into categories,recognizing objeects and dividing images into parts.CNNs have two benefits over regular neural networks:they can automatically learn important features from the data and they share parameters between different parts of the network which make them more efficient.
+
+![CNN](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/06901603-f28e-4aba-b456-1f46eb027555)
+
+
 
 <h3>What is segmentation task in NN? Is it supervised or unsupervised?</h3>
 The segmentation task involves identifying and delineating different objects or regions within data,typically images.It usally requires labeled data, making it a supervised task.
