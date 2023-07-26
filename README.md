@@ -30,7 +30,7 @@ It is a special kind of neural network made for working with structured data,par
 
 
 <h3>What is segmentation task in NN? Is it supervised or unsupervised?</h3>
-The segmentation task involves identifying and delineating different objects or regions within data,typically images.It usally requires labeled data, making it a supervised task.
+The segmentation task involves identifying and delineating different objects or regions within data,typically images.It usually requires labeled data, making it a supervised task.
 
 <h3>What is classification task in NN? Is it supervised or unsupervised?</h3>
 The classification task assigns input data to specific categories or classes.It is also a supervised task that requires labeled data with inputs and corresponding target classes.
@@ -55,7 +55,7 @@ In supervised learning, the dataset contains labeled data with inputs and corres
 Color space refers to specific way of representing colors in a mathematical or visual model.It defines the range of colors that can be displayed or captured and provides a standardized system for encoding and interpreting colors.
 
 <h3>What RGB stands for ?</h3>
-RGB stands for Red,Green and Blue.It is an additive color model in which colors are created by combining different intensities of red,green and blue prmary colors.RGB is widely useed in digital imaging and displays.
+RGB stands for Red,Green and Blue.It is an additive color model in which colors are created by combining different intensities of red,green and blue primary colors.RGB is widely used in digital imaging and displays.
 
 
 <h3>In Python, can we transform from one color space to another?</h3>
