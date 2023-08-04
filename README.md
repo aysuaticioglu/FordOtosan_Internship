@@ -159,6 +159,75 @@ This transformation allows machine learning models to process and classify categ
 <h4>What is CUDA programming? Answer without detail.</h4>
 CUDA is a technology developed by NVIDIA. This technology allows graphics cards, which are typically used to accelerate graphics tasks, to also perform tasks involving mathematical calculations rapidly. In other words, computers can think and process tasks faster.
 
+<h2>Design Segmentation Model</h2>
+<h4>What is the difference between CNN and Fully CNN (FCNN) ?</h4>
+
+![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/0ed85221-b63d-4fff-bfd4-b3a697dbab6b)
+
+
+CNN (Convolutional Neural Network) and FCNN (Fully Convolutional Neural Network) are both types of neural networks commonly used for image analysis and other tasks. However, there are differences between the two in terms of architecture and applications.
+
+<h5>Convolutional Neural Network (CNN):</h5>
+
+A CNN consists of multiple layers, including convolutional layers, pooling layers, and fully connected layers.
+
+The convolutional layers are responsible for detecting features in the input image by applying convolution operations with learnable filters.
+Pooling layers reduce the spatial dimensions of the features, helping to decrease the computational load and make the network more robust to variations in input.
+
+CNNs are commonly used for image classification, object detection, and other tasks where spatial hierarchies of features are important.
+
+The final layers of a CNN are typically fully connected layers that make predictions based on the extracted features.
+
+<h5>Fully Convolutional Neural Network (FCNN):</h5>
+
+An FCNN is a type of CNN where all layers, including the final prediction layers, are convolutional layers.
+
+FCNNs are designed for tasks that involve pixel-wise prediction or semantic segmentation, where the goal is to assign a class label to each pixel in an image.
+
+FCNNs take an input image and produce an output feature map with the same spatial dimensions as the input image.
+
+The output feature map can then be upsampled using techniques like transposed convolutions to generate a dense prediction map.
+
+FCNNs are used in tasks such as semantic segmentation, image-to-image translation, and other tasks where maintaining spatial information is crucial.
+
+In summary, the key difference between CNN and FCNN lies in their architecture and applications. CNNs are more general and suitable for tasks like image classification and object detection, while FCNNs are specialized for tasks involving pixel-wise predictions and semantic segmentation, where preserving spatial information is essential.
+
+
+
+<h4>What are the different layers on CNN ?</h4>
+
+
+
+A Convolutional Neural Network (CNN) typically consists of various types of layers that work together to process input data, extract features, and make predictions. Here are the main types of layers found in a CNN:
+
+Input Layer: This layer takes raw input data, often an image. The dimensions of the input data are determined by the size and resolution of the images in the dataset.
+Convolutional Layer: This is the fundamental layer of a CNN. It applies learnable filters (kernels) to the input image and computes dot products between the filter and local patches of the input. This process helps detect features like edges, corners, and textures.
+
+Activation Layer (ReLU): Following each convolutional layer, an activation layer is typically applied, often using the Rectified Linear Unit (ReLU) activation. ReLU sets negative values to zero while leaving positive values unchanged.
+Pooling Layer (Pooling or Subsampling): Pooling layers perform downsampling of the input's spatial dimensions. Common pooling methods include Max Pooling (selecting the maximum value from a group of values) and Average Pooling (computing the average value).
+
+Fully Connected Layer (FC Layer): Also known as a dense layer, this layer is typically used at the end of a CNN. It connects each neuron from the previous layer to every neuron in the subsequent layer. It's used for making predictions.
+
+Flatten Layer: This layer is used to transform the 2D output of previous convolutional and pooling layers into a 1D vector. This vector can then be fed into a fully connected layer.
+
+Batch Normalization Layer: Batch Normalization is used to normalize the activations of the previous layer. It helps stabilize and speed up training by reducing internal covariate shifts.
+
+Dropout Layer: Dropout involves temporarily "dropping out" random neurons during training. This encourages the network to learn more robust features by preventing overfitting.
+
+These layers are typically stacked sequentially to form the architecture of a CNN. The specific arrangement and number of layers can vary based on the complexity of the task and design preferences. CNNs have demonstrated exceptional performance in visual tasks such as image classification, object detection, and image segmentation.
+
+
+![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/dc6d9cc6-c54f-4028-95b2-edba3d78312c)
+
+
+<h4>What is activation function ? Why is softmax usually used in the last layer?</h4>
+
+An activation function is a mathematical operation applied to the output of each neuron in a neural network. These functions help enhance the learning and representation capabilities of incoming data, allowing the neural network to understand more complex relationships.
+
+Softmax, on the other hand, is an activation function typically used in the last layer of a neural network, especially for classification problems with multiple classes. It represents the contribution of each class to the output as a probability distribution. This helps us identify which class is more likely to give the correct result. The main reason for using Softmax is to make the outputs meaningful and interpretable, aiding in selecting the most probable class.
+
+
+
 
 
 
