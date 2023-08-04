@@ -114,3 +114,54 @@ Codes to add to the image by coloring the pixels determined as empty space and w
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/mask_on_image.py">mask_on_image.py</a>
 
+
+<h2>Converting into Tensor</h2>
+<h4>Explain Computational Graph.</h4>
+	A Computational Graph is a graphical representation method that shows mathematical operations and their intermediate results. It is an essential concept used to understand the training and backpropagation processes of deep learning and machine learning models.
+In a Computational Graph, all the mathematical operations and intermediate values from the input data to the output data are represented as nodes and the relationships between them are represented as directed edges.
+This graph illustrates how data flows during the forward pass and how gradients are computed during backpropagation. It provides insights into the computations performed by the model during the training process and helps visualize how parameters are updated.
+Computational Graphs are valuable tools to gain a deeper understanding of the mathematical structure of deep learning models and make them more interpretable and traceable. They play a crucial role in improving the model's performance and understanding and correcting errors.
+
+
+<h4>What is Tensor?</h4>
+A Tensor is a mathematical concept used in scientific and computational calculations. It can be thought of as a generalization of a vector and a matrix.
+
+In simple terms, a Tensor represents data in multi-dimensional arrays or matrices. A scalar is the simplest form of a Tensor and contains only one number. A vector is a Tensor that consists of a sequence of n numbers. A matrix can be thought of as a table with rows and columns.
+
+However, a Tensor can have three or more dimensions. For example, a three-dimensional Tensor is used to represent a colored image (height x width x color channels). Video data can be represented using four-dimensional Tensors (sequence of frames x height x width x color channels).
+
+Tensors are widely used in areas like deep learning and artificial intelligence. In these fields, input and output data in neural network models, as well as weights and gradients, are represented as Tensors, and various mathematical operations are performed on these Tensors.
+
+In conclusion, Tensors are essential for representing data in different dimensions and structures and performing mathematical operations. They are widely used in various fields, from scientific calculations to artificial intelligence applications.
+￼
+
+![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/cd29249b-e405-446b-ae83-043a7f723711)
+
+
+
+
+
+<h4>What is one hot encoding?</h4>
+One Hot Encoding is a method used in machine learning and deep learning models to represent categorical data in a numerical format. In this method, each category is represented as an array (vector), where only the element corresponding to the category is "1" and the other elements are "0". This way, categorical data is converted into a numerical format.
+For example, if we have three different color types: “red”, “green” and “blue, we can apply One Hot Encoding as follows:
+
+* One Hot Encoding for “red”: [1, 0, 0]
+* One Hot Encoding for “green”: [0, 1, 0]
+* One Hot Encoding for “blue: [0, 0, 1]
+
+  
+This transformation allows machine learning models to process and classify categorical data more effectively. It also emphasizes that there is no inherent order or ranking among the categories.
+￼
+
+![url](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b3442e5e-63d8-4e33-925e-df24f44ffdab)
+
+
+<h4>What is CUDA programming? Answer without detail.</h4>
+CUDA is a technology developed by NVIDIA. This technology allows graphics cards, which are typically used to accelerate graphics tasks, to also perform tasks involving mathematical calculations rapidly. In other words, computers can think and process tasks faster.
+
+
+
+
+
+
+
