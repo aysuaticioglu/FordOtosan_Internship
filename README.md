@@ -123,6 +123,43 @@ This graph illustrates how data flows during the forward pass and how gradients 
 Computational Graphs are valuable tools to gain a deeper understanding of the mathematical structure of deep learning models and make them more interpretable and traceable. They play a crucial role in improving the model's performance and understanding and correcting errors.
 
 
+For example, consider the relatively simple expression: 
+
+<code>f(x, y, z) = (x + y) * z </code>
+
+This is how we would represent that function as as computational graph:
+
+![0*ohO11wTD8DCUMVR8](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b701804e-1625-4a9f-a298-93da9be32eb8)
+
+There are three input nodes, labeled X, Y, and Z. The two other nodes are function nodes. In a computational graph we generally compose many simple functions into a more complex function. We can do composition in mathematical notation as well, but I hope you’ll agree the following isn’t as clean as the graph above:
+
+
+<code>f(x, y, z) = h(g(x, y) , z)
+g(i, j) = i + j
+h(p, q) = p*q
+</code>
+
+In both of these notations we can compute the answers to each function separately, provided we do so in the correct order. Before we know the answer to f(x, y, z) first we need the answer to g(x, y) and then h(g(x, y), z). With the mathematical notation we resolve these dependencies by computing the deepest parenthetical first; in computational graphs we have to wait until all the edges pointing into a node have a value before computing the output value for that node. Let’s look at the example for computing f(1, 2, 3).
+
+<code>f(1, 2, 3) = h(g(1, 2), 3)
+g(1, 2) = 1 + 2 = 3
+f(1, 2, 3) = h(3, 3)
+h(3, 3) = 3*3 = 9
+f(1, 2, 3) = 9</code>
+
+And in the graph, we use the output from each node as the weight of the corresponding edge:
+
+![0*DxiGsw0MskmqsL2a](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f3d65be7-1b4f-4d36-bc41-515ad5fb5edd)
+
+
+
+
+The weight of the outbound edge for the plus (+) node has to be computed before the the multiply (*) node can compute its outbound edge weight.
+Either way, graph or function notation, we get the same answer because these are just two ways of expressing the same thing.
+In this simple example it might be hard to see the advantage of using a computational graph over function notation. After all, there isn’t anything terribly hard to understand about the function f(x, y, z) = (x + y) * z. The advantages become more apparent when we reach the scale of neural networks.
+
+
+
 <h4>What is Tensor?</h4>
 A Tensor is a mathematical concept used in scientific and computational calculations. It can be thought of as a generalization of a vector and a matrix.
 
@@ -200,19 +237,21 @@ In summary, the key difference between CNN and FCNN lies in their architecture a
 
 A Convolutional Neural Network (CNN) typically consists of various types of layers that work together to process input data, extract features, and make predictions. Here are the main types of layers found in a CNN:
 
-Input Layer: This layer takes raw input data, often an image. The dimensions of the input data are determined by the size and resolution of the images in the dataset.
-Convolutional Layer: This is the fundamental layer of a CNN. It applies learnable filters (kernels) to the input image and computes dot products between the filter and local patches of the input. This process helps detect features like edges, corners, and textures.
+<b>Input Layer:</b> This layer takes raw input data, often an image. The dimensions of the input data are determined by the size and resolution of the images in the dataset.
 
-Activation Layer (ReLU): Following each convolutional layer, an activation layer is typically applied, often using the Rectified Linear Unit (ReLU) activation. ReLU sets negative values to zero while leaving positive values unchanged.
-Pooling Layer (Pooling or Subsampling): Pooling layers perform downsampling of the input's spatial dimensions. Common pooling methods include Max Pooling (selecting the maximum value from a group of values) and Average Pooling (computing the average value).
+<b>Convolutional Layer:</b> This is the fundamental layer of a CNN. It applies learnable filters (kernels) to the input image and computes dot products between the filter and local patches of the input. This process helps detect features like edges, corners, and textures.
 
-Fully Connected Layer (FC Layer): Also known as a dense layer, this layer is typically used at the end of a CNN. It connects each neuron from the previous layer to every neuron in the subsequent layer. It's used for making predictions.
+<b>Activation Layer (ReLU):</b> Following each convolutional layer, an activation layer is typically applied, often using the Rectified Linear Unit (ReLU) activation. ReLU sets negative values to zero while leaving positive values unchanged.
 
-Flatten Layer: This layer is used to transform the 2D output of previous convolutional and pooling layers into a 1D vector. This vector can then be fed into a fully connected layer.
+<b>Pooling Layer (Pooling or Subsampling):</b> Pooling layers perform downsampling of the input's spatial dimensions. Common pooling methods include Max Pooling (selecting the maximum value from a group of values) and Average Pooling (computing the average value).
 
-Batch Normalization Layer: Batch Normalization is used to normalize the activations of the previous layer. It helps stabilize and speed up training by reducing internal covariate shifts.
+<b>Fully Connected Layer (FC Layer):</b> Also known as a dense layer, this layer is typically used at the end of a CNN. It connects each neuron from the previous layer to every neuron in the subsequent layer. It's used for making predictions.
 
-Dropout Layer: Dropout involves temporarily "dropping out" random neurons during training. This encourages the network to learn more robust features by preventing overfitting.
+<b>Flatten Layer:</b> This layer is used to transform the 2D output of previous convolutional and pooling layers into a 1D vector. This vector can then be fed into a fully connected layer.
+
+<b>Batch Normalization Layer:</b> Batch Normalization is used to normalize the activations of the previous layer. It helps stabilize and speed up training by reducing internal covariate shifts.
+
+<b>Dropout Layer:</b> Dropout involves temporarily "dropping out" random neurons during training. This encourages the network to learn more robust features by preventing overfitting.
 
 These layers are typically stacked sequentially to form the architecture of a CNN. The specific arrangement and number of layers can vary based on the complexity of the task and design preferences. CNNs have demonstrated exceptional performance in visual tasks such as image classification, object detection, and image segmentation.
 
