@@ -271,8 +271,6 @@ Softmax, on the other hand, is an activation function typically used in the last
 <h3>What is parameter in NN ?</h3>  
 
 A parameter in a neural network is a number that guides how the network works. For instance, weights and biases of the neurons are parameters that shape how input turns into output. These numbers get adjusted while the network learns to make its predictions more accurate.
-On the other hand, a hyperparameter is a value that controls how the network is trained. Things like the number of hidden layers, neurons in each layer, learning rate, and activation function are hyperparameters. You choose these values before training starts, and they affect how well the network performs. Unlike parameters, the network doesn't learn hyperparameters – you set them before training.
-
 
 
 <h3>What is hyper-parameter in NN ?</h3>  
