@@ -265,6 +265,97 @@ An activation function is a mathematical operation applied to the output of each
 
 Softmax, on the other hand, is an activation function typically used in the last layer of a neural network, especially for classification problems with multiple classes. It represents the contribution of each class to the output as a probability distribution. This helps us identify which class is more likely to give the correct result. The main reason for using Softmax is to make the outputs meaningful and interpretable, aiding in selecting the most probable class.
 
+<h2>Train</h2>  
+
+
+<h3>What is parameter in NN ?</h3>  
+
+A parameter in a neural network is a number that guides how the network works. For instance, weights and biases of the neurons are parameters that shape how input turns into output. These numbers get adjusted while the network learns to make its predictions more accurate.
+On the other hand, a hyperparameter is a value that controls how the network is trained. Things like the number of hidden layers, neurons in each layer, learning rate, and activation function are hyperparameters. You choose these values before training starts, and they affect how well the network performs. Unlike parameters, the network doesn't learn hyperparameters – you set them before training.
+
+
+
+<h3>What is hyper-parameter in NN ?</h3>  
+
+A hyperparameter in a neural network is like a setting that guides how the network learns and how well it works. For instance, you can pick values for things like the number of hidden layers, the learning rate, and the activation function before you start training the network. These choices influence how quickly the network learns and how accurate its predictions become. Unlike the numbers the network learns during training (like weights and biases), hyperparameters are chosen by you to get the best results for a specific job.
+
+
+<h4>We mention the dataset and we separate it into 2: training & test. In addition to them, there is a validation dataset. What is it for?</h4>  
+
+A validation dataset is like a practice field for a machine learning model. It's a part of the dataset that's not used for training or testing. Instead, it helps you fine-tune how the model learns. For example, you can adjust important choices like hidden layers, learning speed, or activation style using this data. The goal is to make the model as smart as possible.
+Comparing the model's performance on this validation data with its training performance shows if it's really learning or maybe just memorizing things. This helps to avoid mistakes like overthinking (overfitting) or not learning enough (underfitting). If the model's accuracy on the validation data starts getting worse, you might want to change how it learns.
+
+<h3>What is epoch?</h3>  
+
+An epoch is a term in machine learning that represents a complete cycle through the entire training dataset during the training process. It's like going through all the pages of a book one time. Each epoch helps the model learn and adjust its parameters based on the data it sees. The number of epochs is something you can decide before training, like choosing how many times to read the book to understand it better. Too few epochs might not capture all the patterns, while too many epochs can lead to memorizing the data instead of learning from it. So, finding the right balance is key!
+
+<h3>What is batch?</h3>  
+A batch in machine learning is a small group of examples from the training dataset that are processed together. It's like learning from a few pages of a book at a time instead of reading the whole book in one go. Using batches helps speed up training and makes computations more efficient. Each batch contributes a little bit to adjusting the model's parameters. Think of it as learning in small chunks rather than trying to understand everything all at once.
+
+<h3>What is iteration? Explain with an example: "If we have x images as data and batch size is y. Then an epoch should run z iterations."</h3>  
+
+An iteration in machine learning is a single step where the model processes a batch of data to update its parameters. It's like reading a few pages of a book before making some notes.
+Let's break down the example: "If we have x images as data and batch size is y. Then an epoch should run z iterations."  
+
+If you have a total of x images in your training dataset and you're using batches of size y, then an epoch – which covers the whole dataset – should run z iterations. The number of iterations (z) is calculated by dividing the total number of images (x) by the batch size (y):  
+<code>z = x / y</code>  
+For instance, if you have 1000 images and you're using batches of 100, then an epoch should run 10 iterations because 1000 / 100 = 10. Each iteration would process a batch of 100 images, updating the model's parameters gradually as it goes through the entire dataset.
+
+
+<h3>What Is the Cost Function?</h3>  
+
+The cost function is a way to measure how wrong a machine learning model's predictions are compared to the actual outcomes. It calculates the difference between predicted and true values. The model's goal is to minimize this difference while training, so it gets better at making accurate predictions.
+
+<h3>The process of minimizing (or maximizing) any mathematical expression is called optimization. What is/are the purpose(s) of an optimizer in NN?</h3>  
+
+The purpose of an optimizer in a neural network is to guide the process of making the model better at its task. Optimization involves adjusting the model's internal parameters so that its predictions match the desired outcomes more accurately.
+
+<h4>What is Batch Gradient Descent & Stochastic Gradient Descent? Compare them.</h4>  
+<h5>Batch Gradient Descent (BGD):</h5>  
+Batch Gradient Descent is a optimization technique used to update the model's parameters by considering the entire training dataset in each iteration. In BGD, the model computes the gradient of the cost function with respect to all training examples and then updates the parameters accordingly. This leads to more accurate gradient estimates, as it takes into account the global structure of the data. However, BGD can be computationally expensive, especially for large datasets, because it requires processing the entire dataset in each iteration.
+
+<h5>Stochastic Gradient Descent (SGD):</h5>  
+Stochastic Gradient Descent is a variation of gradient descent where the model updates its parameters using only one randomly selected training example in each iteration. This means that the parameter updates are more frequent and can lead to faster convergence. However, because each update is based on a single example, the gradient estimates can be noisy and have more variance. As a result, the optimization process can be more erratic, with a tendency to jump around the optimal solution.   
+
+<b>Comparison:</b>
+
+<b>Efficiency:</b>  
+BGD processes the entire dataset, making fewer updates but with more accurate gradients.  
+SGD processes one example at a time, leading to frequent updates but with noisy gradients.    
+		
+<b>Convergence:</b>  
+BGD typically converges to the optimal solution with smoother, more gradual updates.  
+SGD can converge faster due to frequent updates, but the path to convergence might be more erratic.  
+
+<b>Noise:</b>  
+BGD has smoother gradients because it considers the entire dataset, reducing the impact of noisy individual examples.  
+SGD has noisy gradients due to its single-example updates, which can cause fluctuations in the optimization process.  
+
+<b>Computational Complexity:</b>  
+BGD can be computationally intensive, especially for large datasets, as it requires processing the entire dataset in each iteration.  
+SGD is computationally more efficient since it only processes one example at a time, making it suitable for large datasets. 
+
+<b>Generalization:</b>
+BGD might generalize better as it considers the entire dataset and smooths out noise.
+SGD can sometimes generalize less effectively due to the noisy updates, which might cause overfitting.
+		
+<b>Batch Size:</b>
+Mini-batch Gradient Descent is a compromise between BGD and SGD. It processes a small subset (batch) of the dataset, offering a trade-off between smooth updates and computational efficiency.
+  
+In summary, Batch Gradient Descent processes the whole dataset, providing accurate gradients but can be slow. Stochastic Gradient Descent processes one example at a time, converging faster but with noisy gradients. The choice between them often depends on the dataset size, computational resources, and desired convergence behavior.
+
+
+<h3>What is Backpropogation ? What is used for ?</h3>  
+
+![18870backprop2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/5d8cc7b1-a252-4659-887e-94eb99e9a149)
+
+Backpropagation, a term derived from "backward propagation of errors," constitutes a core algorithm in training artificial neural networks. Its role is pivotal in guiding neural networks toward making accurate predictions by iteratively refining their internal parameters, namely weights and biases. The key mechanism behind backpropagation is the calculation of gradients for these parameters with respect to a chosen loss function.  
+
+<h5>Purpose and Significance:</h5>  
+Backpropagation bears immense significance as the keystone of neural network training. It equips the network with the capability to adapt its internal parameters based on observed discrepancies, thereby fostering continuous improvement in prediction accuracy. The very essence of machine learning hinges upon the ability to learn from data, and backpropagation offers the mechanism for neural networks to decipher complex patterns, generalize from training data to novel instances, and ultimately fulfill intricate tasks through the refinement of their parameters.
+
+
+
 
 
 
