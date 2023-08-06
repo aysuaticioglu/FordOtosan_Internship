@@ -172,7 +172,7 @@ Tensors are widely used in areas like deep learning and artificial intelligence.
 In conclusion, Tensors are essential for representing data in different dimensions and structures and performing mathematical operations. They are widely used in various fields, from scientific calculations to artificial intelligence applications.
 ￼
 
-![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/cd29249b-e405-446b-ae83-043a7f723711)
+<img width="401" alt="Adsız 4" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/cd29249b-e405-446b-ae83-043a7f723711"/>
 
 
 
@@ -278,14 +278,14 @@ A parameter in a neural network is a number that guides how the network works. F
 A hyperparameter in a neural network is like a setting that guides how the network learns and how well it works. For instance, you can pick values for things like the number of hidden layers, the learning rate, and the activation function before you start training the network. These choices influence how quickly the network learns and how accurate its predictions become. Unlike the numbers the network learns during training (like weights and biases), hyperparameters are chosen by you to get the best results for a specific job.
 
 
-<h4>We mention the dataset and we separate it into 2: training & test. In addition to them, there is a validation dataset. What is it for?</h4>  
+<h3>We mention the dataset and we separate it into 2: training & test. In addition to them, there is a validation dataset. What is it for?</h3>  
 
 A validation dataset is like a practice field for a machine learning model. It's a part of the dataset that's not used for training or testing. Instead, it helps you fine-tune how the model learns. For example, you can adjust important choices like hidden layers, learning speed, or activation style using this data. The goal is to make the model as smart as possible.
 Comparing the model's performance on this validation data with its training performance shows if it's really learning or maybe just memorizing things. This helps to avoid mistakes like overthinking (overfitting) or not learning enough (underfitting). If the model's accuracy on the validation data starts getting worse, you might want to change how it learns.
 
 <h3>What is epoch?</h3>  
 
-An epoch is a term in machine learning that represents a complete cycle through the entire training dataset during the training process. It's like going through all the pages of a book one time. Each epoch helps the model learn and adjust its parameters based on the data it sees. The number of epochs is something you can decide before training, like choosing how many times to read the book to understand it better. Too few epochs might not capture all the patterns, while too many epochs can lead to memorizing the data instead of learning from it. So, finding the right balance is key!
+An epoch is a term in machine learning that represents a complete cycle through the entire training dataset during the training process. It's like going through all the pages of a book one time. Each epoch helps the model learn and adjust its parameters based on the data it sees. The number of epochs is something you can decide before training, like choosing how many times to read the book to understand it better. Too few epochs might not capture all the patterns, while too many epochs can lead to memorizing the data instead of learning from it.
 
 <h3>What is batch?</h3>  
 A batch in machine learning is a small group of examples from the training dataset that are processed together. It's like learning from a few pages of a book at a time instead of reading the whole book in one go. Using batches helps speed up training and makes computations more efficient. Each batch contributes a little bit to adjusting the model's parameters. Think of it as learning in small chunks rather than trying to understand everything all at once.
@@ -308,7 +308,7 @@ The cost function is a way to measure how wrong a machine learning model's predi
 
 The purpose of an optimizer in a neural network is to guide the process of making the model better at its task. Optimization involves adjusting the model's internal parameters so that its predictions match the desired outcomes more accurately.
 
-<h4>What is Batch Gradient Descent & Stochastic Gradient Descent? Compare them.</h4>  
+<h3>What is Batch Gradient Descent & Stochastic Gradient Descent? Compare them.</h3>  
 <h5>Batch Gradient Descent (BGD):</h5>  
 Batch Gradient Descent is a optimization technique used to update the model's parameters by considering the entire training dataset in each iteration. In BGD, the model computes the gradient of the cost function with respect to all training examples and then updates the parameters accordingly. This leads to more accurate gradient estimates, as it takes into account the global structure of the data. However, BGD can be computationally expensive, especially for large datasets, because it requires processing the entire dataset in each iteration.
 
