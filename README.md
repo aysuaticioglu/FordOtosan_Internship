@@ -196,6 +196,78 @@ This transformation allows machine learning models to process and classify categ
 <h4>What is CUDA programming? Answer without detail.</h4>
 CUDA is a technology developed by NVIDIA. This technology allows graphics cards, which are typically used to accelerate graphics tasks, to also perform tasks involving mathematical calculations rapidly. In other words, computers can think and process tasks faster.
 
+
+<h2>Preprocessing</h2>
+In this stage, data preprocessing steps were conducted to prepare for training the Image Segmentation model.
+Preparing and Normalizing Images
+To feed images into the model, images were first normalized and resized to a specific dimension.
+
+
+```python
+import cv2
+import numpy as np
+
+def preprocess_image(image_path, output_shape):
+    # Read the image
+    img = cv2.imread(image_path)
+    
+    # Normalize the image to the range [0, 255]
+    norm_img = cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX)
+    
+    # Resize the image to the specified dimension
+    img_resized = cv2.resize(norm_img, output_shape)
+    
+    return img_resized
+
+```
+<h3>Preparing Masks and One-Hot Encoding</h3>
+To provide masks to the model, masks were first resized to a specific dimension. Subsequently, masks were prepared for the model using one-hot encoding.
+
+```python
+def one_hot_encoder(mask, n_classes):
+    # Create a separate channel for each class
+    one_hot_mask = np.zeros((*mask.shape, n_classes), dtype=np.int)
+    
+    # Apply one-hot encoding by iterating over each pixel of the mask
+    for i, unique_value in enumerate(np.unique(mask)):
+        one_hot_mask[:, :, i][mask == unique_value] = 1
+    
+    return one_hot_mask
+```
+
+<h3>Converting to Tensor Format</h3>
+For the PyTorch model, data needed to be converted into tensor format.
+
+```python
+import torch
+
+def tensorize_image(image_array, cuda=False):
+    # Convert the image to tensor format (C x H x W)
+    torch_image = torch.from_numpy(image_array).permute(2, 0, 1).float()
+    
+    # GPU usage (optional)
+    if cuda:
+        torch_image = torch_image.cuda()
+    
+    return torch_image
+
+def tensorize_mask(mask_array, cuda=False):
+    # Convert the mask to tensor format (C x H x W)
+    torch_mask = torch.from_numpy(mask_array).permute(2, 0, 1).float()
+    
+    # GPU usage (optional)
+    if cuda:
+        torch_mask = torch_mask.cuda()
+    
+    return torch_mask
+```  
+Images and masks were prepared and converted into tensor format to be fed into the PyTorch model. As a result, the data was ready to be loaded into the model for the segmentation process.   
+
+Here's the section with the codes;
+<a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/mask_on_image.py">preprocess.py</a>
+
+
+
 <h2>Design Segmentation Model</h2>
 <h4>What is the difference between CNN and Fully CNN (FCNN) ?</h4>
 
@@ -206,26 +278,26 @@ CNN (Convolutional Neural Network) and FCNN (Fully Convolutional Neural Network)
 
 <h5>Convolutional Neural Network (CNN):</h5>
 
-A CNN consists of multiple layers, including convolutional layers, pooling layers, and fully connected layers.
+*A CNN consists of multiple layers, including convolutional layers, pooling layers, and fully connected layers.
 
-The convolutional layers are responsible for detecting features in the input image by applying convolution operations with learnable filters.
+*The convolutional layers are responsible for detecting features in the input image by applying convolution operations with learnable filters.
 Pooling layers reduce the spatial dimensions of the features, helping to decrease the computational load and make the network more robust to variations in input.
 
-CNNs are commonly used for image classification, object detection, and other tasks where spatial hierarchies of features are important.
+*CNNs are commonly used for image classification, object detection, and other tasks where spatial hierarchies of features are important.
 
-The final layers of a CNN are typically fully connected layers that make predictions based on the extracted features.
+*The final layers of a CNN are typically fully connected layers that make predictions based on the extracted features.
 
 <h5>Fully Convolutional Neural Network (FCNN):</h5>
 
-An FCNN is a type of CNN where all layers, including the final prediction layers, are convolutional layers.
+*An FCNN is a type of CNN where all layers, including the final prediction layers, are convolutional layers.
 
-FCNNs are designed for tasks that involve pixel-wise prediction or semantic segmentation, where the goal is to assign a class label to each pixel in an image.
+*FCNNs are designed for tasks that involve pixel-wise prediction or semantic segmentation, where the goal is to assign a class label to each pixel in an image.
 
-FCNNs take an input image and produce an output feature map with the same spatial dimensions as the input image.
+*FCNNs take an input image and produce an output feature map with the same spatial dimensions as the input image.
 
-The output feature map can then be upsampled using techniques like transposed convolutions to generate a dense prediction map.
+*The output feature map can then be upsampled using techniques like transposed convolutions to generate a dense prediction map.
 
-FCNNs are used in tasks such as semantic segmentation, image-to-image translation, and other tasks where maintaining spatial information is crucial.
+*FCNNs are used in tasks such as semantic segmentation, image-to-image translation, and other tasks where maintaining spatial information is crucial.
 
 In summary, the key difference between CNN and FCNN lies in their architecture and applications. CNNs are more general and suitable for tasks like image classification and object detection, while FCNNs are specialized for tasks involving pixel-wise predictions and semantic segmentation, where preserving spatial information is essential.
 
