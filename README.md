@@ -340,6 +340,7 @@ Softmax, on the other hand, is an activation function typically used in the last
 <h3>Model</h3>
 
 <h4>Convolutional Layer (self.conv1):</h4> The input data is processed by the first convolutional layer, self.conv1. Convolutional layers are used to extract and emphasize features from input images. Each filter scans across the image to capture specific features, resulting in feature maps.
+
 ```python
 x = self.conv1(x)
 ```
