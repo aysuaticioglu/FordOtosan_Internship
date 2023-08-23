@@ -337,6 +337,35 @@ An activation function is a mathematical operation applied to the output of each
 
 Softmax, on the other hand, is an activation function typically used in the last layer of a neural network, especially for classification problems with multiple classes. It represents the contribution of each class to the output as a probability distribution. This helps us identify which class is more likely to give the correct result. The main reason for using Softmax is to make the outputs meaningful and interpretable, aiding in selecting the most probable class.
 
+<h3>Model</h3>
+
+<h4>Convolutional Layer (self.conv1):</h4> The input data is processed by the first convolutional layer, self.conv1. Convolutional layers are used to extract and emphasize features from input images. Each filter scans across the image to capture specific features, resulting in feature maps.
+```python
+x = self.conv1(x)
+```
+<h4>ReLU Activation Function:</h4> Following the convolution, the output goes through the Rectified Linear Unit (ReLU) activation function. ReLU transforms negative input values to zero while leaving positive values unchanged, enhancing feature visibility. Additionally, it aids in the efficient propagation of gradients.
+
+```python
+x = F.relu(x)
+```
+<h4>Second Convolutional Layer (self.conv2):</h4> The output from the ReLU activation is processed by the second convolutional layer, self.conv2. This layer also emphasizes features and generates new feature maps.
+
+```python
+x = self.conv2(x)
+```
+<h4>Softmax Function (Output Layer):</h4> Lastly, the Softmax function is applied at the output layer. This function represents the model's class predictions as a probability distribution. The dim=1 parameter ensures that the sum of class probabilities for each example totals to 1.
+
+```python
+x = nn.Softmax(dim=1)(x)
+```
+In conclusion, this code snippet involves extracting features from input data through convolutional operations, subsequently enhancing these features via ReLU activation, and finally utilizing the Softmax function to present predictions as a probability distribution. This type of processing is commonly used in visual tasks like image classification.
+
+
+Here's the section with the codes;
+<a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/model.py">model.py</a>
+
+
+
 <h2>Train</h2>  
 
 
