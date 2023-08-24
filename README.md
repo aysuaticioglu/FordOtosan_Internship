@@ -525,7 +525,8 @@ plt.show()
 ```
 
 
-<img width="875" alt="g3" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c9d278be-60dc-4fb8-bd56-34f8b0050f10">
+<img width="875" alt="g3" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/fc93c6f2-28fb-4f98-8fe2-777b072a77d1">
+
 
 
 ![g1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7708ceed-24ea-4ef6-82bc-8bf3bd479ab3)![g2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b60e0cc5-ad45-49a9-b77f-7ba3f1ba975e)
