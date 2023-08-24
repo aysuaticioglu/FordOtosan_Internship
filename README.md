@@ -531,8 +531,7 @@ plt.show()
 
 ![g1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7708ceed-24ea-4ef6-82bc-8bf3bd479ab3)![g2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b60e0cc5-ad45-49a9-b77f-7ba3f1ba975e)
 
-Final Epoch Results:
-Epoch 20 - Train Loss: 57.7545, Train Accuracy: 42394.1600, Validation Loss: 59.7178, Validation Accuracy: 40424.0200   
+<code>Final Epoch Results: Epoch 20 - Train Loss: 57.7545, Train Accuracy: 42394.1600, Validation Loss: 59.7178, Validation Accuracy: 40424.0200   </code>
 
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/train.py">train.py</a>
