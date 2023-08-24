@@ -456,7 +456,7 @@ Backpropagation bears immense significance as the keystone of neural network tra
 
 <h2>Training the Model</h2>
 In this section, we will focus on the process of training the model we created in the previous step.  
-Before starting the training step, we need to define some parameters that we will use during the training process:
+We need to define some parameters that we will use during the training process:
 
 ```python
 valid_size = 0.3
@@ -469,15 +469,14 @@ n_classes = 2
 ```  
 
 
-These parameters include values that will facilitate the management of the training stage, such as data set splitting, batch size, and the number of epochs.
+These parameters include values that will facilitate the management of the training phase, such as dataset division, batch size, and number of periods.
 
-After defining the training, validation, and test data, we can proceed to the training step. First, we can shuffle the indices of the dataset to access different data samples:
-
+After defining the training, validation, and testing data, in the training step first, we can mix the indices of the dataset to access different data samples:
 ```python
 indices = np.random.permutation(len(image_path_list))
 ```
 
-Next, we can divide the dataset into appropriate sizes for test, validation, and training data:
+It then divides the dataset into dimensions suitable for testing, validation and training data
 
 ```python
 test_ind = int(len(indices) * test_size)
@@ -493,7 +492,7 @@ train_input_path_list = image_path_list[valid_ind:]
 train_label_path_list = mask_path_list[valid_ind:]
 
 ```  
-Now, the data is divided according to the batch size, converted into tensors, and used in the model. Simultaneously, the predictions are compared with the ground truth values to calculate a loss value:  
+The data is divided according to the batch size, converted into tensors, and used in the model. Simultaneously, the predictions are compared with the ground truth values to calculate a loss value:  
 
 ```python
 criterion = nn.BCELoss()
@@ -524,7 +523,7 @@ plt.title('Validation Loss over Epochs')
 plt.legend()
 plt.show()
 ```
-This way, you can examine the details and results of your training step using graphs. These steps are crucial for understanding the training process and evaluating model performance.  
+
 
 <img width="875" alt="g3" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c9d278be-60dc-4fb8-bd56-34f8b0050f10">
 
