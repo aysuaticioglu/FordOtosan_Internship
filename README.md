@@ -454,13 +454,89 @@ Backpropagation, a term derived from "backward propagation of errors," constitut
 <h5>Purpose and Significance:</h5>  
 Backpropagation bears immense significance as the keystone of neural network training. It equips the network with the capability to adapt its internal parameters based on observed discrepancies, thereby fostering continuous improvement in prediction accuracy. The very essence of machine learning hinges upon the ability to learn from data, and backpropagation offers the mechanism for neural networks to decipher complex patterns, generalize from training data to novel instances, and ultimately fulfill intricate tasks through the refinement of their parameters.
 
+<h2>Training the Model</h2>
+In this section, we will focus on the process of training the model we created in the previous step.  
+Before starting the training step, we need to define some parameters that we will use during the training process:
+
+```python
+valid_size = 0.3
+test_size = 0.1
+batch_size = 8
+epochs = 35
+cuda = True
+input_shape = (224, 224)
+n_classes = 2
+```  
+
+
+These parameters include values that will facilitate the management of the training stage, such as data set splitting, batch size, and the number of epochs.
+
+After defining the training, validation, and test data, we can proceed to the training step. First, we can shuffle the indices of the dataset to access different data samples:
+
+```python
+indices = np.random.permutation(len(image_path_list))
+```
+
+Next, we can divide the dataset into appropriate sizes for test, validation, and training data:
+
+```python
+test_ind = int(len(indices) * test_size)
+valid_ind = int(test_ind + len(indices) * valid_size)
+
+test_input_path_list = image_path_list[:test_ind]
+test_label_path_list = mask_path_list[:test_ind]
+
+valid_input_path_list = image_path_list[test_ind:valid_ind]
+valid_label_path_list = mask_path_list[test_ind:valid_ind]
+
+train_input_path_list = image_path_list[valid_ind:]
+train_label_path_list = mask_path_list[valid_ind:]
+
+```  
+Now, the data is divided according to the batch size, converted into tensors, and used in the model. Simultaneously, the predictions are compared with the ground truth values to calculate a loss value:  
+
+```python
+criterion = nn.BCELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+```
+
+In each epoch, we evaluate the model with validation data to calculate the loss value.
+
+```python
+val_losses = []
+with torch.no_grad():
+    model.eval()
+    for (valid_input_path, valid_label_path) in zip(valid_input_path_list, valid_label_path_list):
+        batch_input = tensorize_image([valid_input_path], input_shape, cuda)
+        batch_label = tensorize_mask([valid_label_path], input_shape, n_classes, cuda)
+        outputs = model(batch_input)
+        loss = criterion(outputs, batch_label)
+        val_losses.append(loss.item())
+```
+These steps are repeated for each epoch, and the loss values are recorded in a list. Once the training is completed, a graph is plotted for the loss values:
+
+```python
+# Plotting the graph
+plt.plot(val_losses, label='Validation Loss', color='orange')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.title('Validation Loss over Epochs')
+plt.legend()
+plt.show()
+```
+This way, you can examine the details and results of your training step using graphs. These steps are crucial for understanding the training process and evaluating model performance.  
+
+<img width="875" alt="g3" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c9d278be-60dc-4fb8-bd56-34f8b0050f10">
+
+
+![g1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7708ceed-24ea-4ef6-82bc-8bf3bd479ab3)![g2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b60e0cc5-ad45-49a9-b77f-7ba3f1ba975e)
 
 
 
-
-
-
-
+Final Epoch Results:
+Epoch 20 - Train Loss: 57.7545, Train Accuracy: 42394.1600, Validation Loss: 59.7178, Validation Accuracy: 40424.0200
+Here's the section with the codes;
+<a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/model.py">train.py</a>
 
 
 
