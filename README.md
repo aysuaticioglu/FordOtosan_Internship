@@ -461,8 +461,8 @@ We need to define some parameters that we will use during the training process:
 ```python
 valid_size = 0.3
 test_size = 0.1
-batch_size = 8
-epochs = 35
+batch_size = 4
+epochs = 20
 cuda = True
 input_shape = (224, 224)
 n_classes = 2
