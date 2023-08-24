@@ -47,16 +47,16 @@ test_ind  = int(len(indices) * test_size)
 valid_ind = int(test_ind + len(indices) * valid_size)
 
 # SLICE TEST DATASET FROM THE WHOLE DATASET
-test_input_path_list = image_path_list[:test_ind][:100]  # Sadece ilk 100 resim
-test_label_path_list = mask_path_list[:test_ind][:100]  # Sadece ilk 100 maske
+test_input_path_list = image_path_list[:test_ind]
+test_label_path_list = mask_path_list[:test_ind]
 
 # SLICE VALID DATASET FROM THE WHOLE DATASET
-valid_input_path_list = image_path_list[test_ind:valid_ind][:100]  # Sadece ilk 100 resim
-valid_label_path_list = mask_path_list[test_ind:valid_ind][:100]  # Sadece ilk 100 maske
+valid_input_path_list = image_path_list[test_ind:valid_ind]
+valid_label_path_list = mask_path_list[test_ind:valid_ind]
 
 # SLICE TRAIN DATASET FROM THE WHOLE DATASET
-train_input_path_list = image_path_list[valid_ind:][:100]  # Sadece ilk 100 resim
-train_label_path_list = mask_path_list[valid_ind:][:100]  # Sadece ilk 100 maske
+train_input_path_list = image_path_list[valid_ind:]
+train_label_path_list = mask_path_list[valid_ind:]
 
 
 # DEFINE STEPS PER EPOCH
