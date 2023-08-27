@@ -339,28 +339,44 @@ Softmax, on the other hand, is an activation function typically used in the last
 
 <h3>Model</h3>
 
-<h4>Convolutional Layer (self.conv1):</h4> The input data is processed by the first convolutional layer, self.conv1. Convolutional layers are used to extract and emphasize features from input images. Each filter scans across the image to capture specific features, resulting in feature maps.  
+In this code snippet, a neural network model for Free Space Segmentation has been defined using the PyTorch framework. The model consists of both encoder and decoder layers, designed to process input images and produce segmentation predictions.
+
+<h4>Encoder Layers:</h4>  
+The encoder layers, denoted by self.encoder_conv1 and self.encoder_conv2, are convolutional layers responsible for extracting and emphasizing features from the input images. The first convolutional layer (self.encoder_conv1) processes the input data and transforms it into feature maps. Subsequently, the output of the first layer is further processed by the second convolutional layer (self.encoder_conv2) to extract more complex features.
 
 ```python
-x = self.conv1(x)
-```
-<h4>ReLU Activation Function:</h4> Following the convolution, the output goes through the Rectified Linear Unit (ReLU) activation function. ReLU transforms negative input values to zero while leaving positive values unchanged, enhancing feature visibility. Additionally, it aids in the efficient propagation of gradients.
+x = self.encoder_conv1(x)
+x = self.encoder_conv2(x)
+```  
+<h4>Decoder Layers:</h4>  
+The decoder layers, represented by self.decoder_conv1 and self.decoder_conv2, work in tandem with the encoder layers. The first decoder convolutional layer (self.decoder_conv1) aims to reconstruct the original features from the encoded representation. The second decoder convolutional layer (self.decoder_conv2) generates the final output, which includes class predictions.
+
+```python
+x = self.decoder_conv1(x)
+x = self.decoder_conv2(x)
+```  
+
+<h4>Activation Functions:</h4>  
+In between convolutional layers, Rectified Linear Unit (ReLU) activation functions are applied. ReLU enhances the visibility of features by transforming negative input values to zero, allowing positive values to propagate through. This activation process is crucial for the model's learning process and improving the quality of feature representations.
 
 ```python
 x = F.relu(x)
-```
-<h4>Second Convolutional Layer (self.conv2):</h4> The output from the ReLU activation is processed by the second convolutional layer, self.conv2. This layer also emphasizes features and generates new feature maps.
+```  
+<h4>Sigmoid Activation for Binary Classification:</h4>  
+Following the decoder layers, a sigmoid activation function is applied (torch.sigmoid(x)) to the output. This is particularly useful for binary classification tasks, where the model's output is transformed into a probability score between 0 and 1, indicating the likelihood of the given class.
 
 ```python
-x = self.conv2(x)
-```
-<h4>Softmax Function (Output Layer):</h4> Lastly, the Softmax function is applied at the output layer. This function represents the model's class predictions as a probability distribution. The dim=1 parameter ensures that the sum of class probabilities for each example totals to 1.
+x = torch.sigmoid(x)
+```  
+
+
+<h4>Upsample Layer:</h4>  
+The model includes an upsampling layer (self.upsample) that resizes the output back to the desired input size. This step is essential to match the original dimensions of the input image.
 
 ```python
-x = nn.Softmax(dim=1)(x)
+x = self.upsample(x)
 ```
-In conclusion, this code snippet involves extracting features from input data through convolutional operations, subsequently enhancing these features via ReLU activation, and finally utilizing the Softmax function to present predictions as a probability distribution. This type of processing is commonly used in visual tasks like image classification.
-
+In conclusion, this code defines a neural network model designed for Free Space Segmentation, which involves extracting features using encoder layers, reconstructing original features using decoder layers, applying activation functions, and generating segmentation predictions.
 
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/model.py">model.py</a>
