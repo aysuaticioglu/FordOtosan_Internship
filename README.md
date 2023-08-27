@@ -345,11 +345,10 @@ In this code snippet, a neural network model for Free Space Segmentation has bee
 The encoder layers, denoted by self.encoder_conv1 and self.encoder_conv2, are convolutional layers responsible for extracting and emphasizing features from the input images. The first convolutional layer (self.encoder_conv1) processes the input data and transforms it into feature maps. Subsequently, the output of the first layer is further processed by the second convolutional layer (self.encoder_conv2) to extract more complex features.
 
 ```python
-The encoder layers play a crucial role in feature extraction. We define two convolutional layers: encoder_conv1 and encoder_conv2. The first layer (encoder_conv1) processes the input image, extracting features using a convolution operation.
+
 x = self.encoder_conv1(x)  # Convolution operation
 x = F.relu(x)  # ReLU activation
 
-The second layer (encoder_conv2) further processes the output of the first layer, capturing more complex features.
 x = self.encoder_conv2(x)  # Convolution operation
 x = F.relu(x)  # ReLU activation
 ```  
@@ -357,7 +356,6 @@ x = F.relu(x)  # ReLU activation
 The decoder layers, represented by self.decoder_conv1 and self.decoder_conv2, work in tandem with the encoder layers. The first decoder convolutional layer (self.decoder_conv1) aims to reconstruct the original features from the encoded representation. The second decoder convolutional layer (self.decoder_conv2) generates the final output, which includes class predictions.
 
 ```python
-The decoder layers work in tandem with the encoder layers. The first decoder convolutional layer (decoder_conv1) aims to reconstruct the original features from the encoded representation.
 x = self.decoder_conv1(x)  # Convolution operation
 x = F.relu(x)  # ReLU activation
 ```  
@@ -366,7 +364,6 @@ x = F.relu(x)  # ReLU activation
 In between convolutional layers, Rectified Linear Unit (ReLU) activation functions are applied. ReLU enhances the visibility of features by transforming negative input values to zero, allowing positive values to propagate through. This activation process is crucial for the model's learning process and improving the quality of feature representations.
 
 ```python
-ReLU Activation: Rectified Linear Unit (ReLU) activation functions are applied after each convolutional layer. ReLU enhances feature visibility and facilitates gradient propagation, which aids in learning.
 x = F.relu(x)  # ReLU activation
 ```  
 <h4>Sigmoid Activation for Binary Classification:</h4>  
@@ -383,7 +380,7 @@ The model includes an upsampling layer (self.upsample) that resizes the output b
 ```python
 x = self.upsample(x)  # Upsample
 ```
-In conclusion, this code defines a neural network model designed for Free Space Segmentation, which involves extracting features using encoder layers, reconstructing original features using decoder layers, applying activation functions, and generating segmentation predictions.
+In conclusion, this code defines a neural network model designed for FreeSpace Segmentation, which involves extracting features using encoder layers, reconstructing original features using decoder layers, applying activation functions, and generating segmentation predictions.
 
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/model.py">model.py</a>
