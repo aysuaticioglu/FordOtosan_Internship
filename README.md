@@ -475,9 +475,9 @@ Backpropagation, a term derived from "backward propagation of errors," constitut
 Backpropagation bears immense significance as the keystone of neural network training. It equips the network with the capability to adapt its internal parameters based on observed discrepancies, thereby fostering continuous improvement in prediction accuracy. The very essence of machine learning hinges upon the ability to learn from data, and backpropagation offers the mechanism for neural networks to decipher complex patterns, generalize from training data to novel instances, and ultimately fulfill intricate tasks through the refinement of their parameters.
 
 <h2>Training the Model</h2>
-In this section, we will focus on the process of training the model we created in the previous step.  
-We need to define some parameters that we will use during the training process:
+In this stage, a neural network model has been defined and trained for free space segmentation. Below, the fundamental steps and functions of the code are summarized:
 
+Hyperparameter Definition: Important parameters were determined to manage the training process. These values control the duration of the training loop, learning rate, model size, and other essential settings.
 ```python
 valid_size = 0.3
 test_size = 0.1
@@ -486,19 +486,20 @@ epochs = 20
 cuda = True
 input_shape = (224, 224)
 n_classes = 2
+output_png_path = 'graphs/loss_graph.png'
 ```  
-
-
-These parameters include values that will facilitate the management of the training phase, such as dataset division, batch size, and number of periods.
-
-After defining the training, validation, and testing data, in the training step first, we can mix the indices of the dataset to access different data samples:
+Preparing Data Lists: Paths to image and mask files were specified. At this stage, the dataset was divided into training, validation, and test data. Shuffling the data enables the model to adapt to different datasets.
 ```python
+image_path_list = glob.glob(os.path.join(IMAGE_DIR, '*'))
+image_path_list.sort()
+
+mask_path_list = glob.glob(os.path.join(MASK_DIR, '*'))
+mask_path_list.sort()
+
+image_mask_check(image_path_list, mask_path_list)
+
 indices = np.random.permutation(len(image_path_list))
-```
 
-It then divides the dataset into dimensions suitable for testing, validation and training data
-
-```python
 test_ind = int(len(indices) * test_size)
 valid_ind = int(test_ind + len(indices) * valid_size)
 
@@ -510,48 +511,63 @@ valid_label_path_list = mask_path_list[test_ind:valid_ind]
 
 train_input_path_list = image_path_list[valid_ind:]
 train_label_path_list = mask_path_list[valid_ind:]
-
+steps_per_epoch = len(train_input_path_list) // batch_size
 ```  
-The data is divided according to the batch size, converted into tensors, and used in the model. Simultaneously, the predictions are compared with the ground truth values to calculate a loss value:  
 
+Model Creation and Optimization: A neural network model was defined, and its learning capability was enhanced through optimization processes. The model's weights and parameters were established.
 ```python
-criterion = nn.BCELoss()
+model = FoInternNet(input_size=input_shape, n_classes=n_classes)
+criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 ```
 
-In each epoch, we evaluate the model with validation data to calculate the loss value.
-
+CUDA Usage: If available, GPU acceleration was utilized. This speeds up computations and improves performance, especially with larger datasets.
 ```python
-val_losses = []
+if cuda:
+    model = model.cuda()
+```
+Accuracy Calculation Function: A function was defined to assess the model's performance. This function calculates how closely the model's predictions align with the actual labels.
+```python
+def calculate_accuracy(outputs, labels):
+    # ...
+    return accuracy
+```
+Training Loop: The model was fed with training data to carry out the learning process. In each training loop, errors between model outputs and actual labels were corrected to update the model. 
+```python
+for epoch in tqdm.tqdm(range(epochs)):
+    model.train()
+    running_loss = 0.0
+    running_accuracy = 0
+
+    # ...
+```
+
+Validation Loop: During the training process, the model's generalization ability was tested using validation data. This step ensures that the model doesn't overfit during the learning process.
+```python
+val_loss = 0
+val_accuracy = 0
+model.eval()
 with torch.no_grad():
-    model.eval()
     for (valid_input_path, valid_label_path) in zip(valid_input_path_list, valid_label_path_list):
-        batch_input = tensorize_image([valid_input_path], input_shape, cuda)
-        batch_label = tensorize_mask([valid_label_path], input_shape, n_classes, cuda)
-        outputs = model(batch_input)
-        loss = criterion(outputs, batch_label)
-        val_losses.append(loss.item())
+        # ...
 ```
-These steps are repeated for each epoch, and the loss values are recorded in a list. Once the training is completed, a graph is plotted for the loss values:
-
+Graphing Results: The performance of both the training and validation processes was visualized using graphs. These graphs allow tracking the progress of the model's training and overall performance.
 ```python
-# Plotting the graph
-plt.plot(val_losses, label='Validation Loss', color='orange')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
-plt.title('Validation Loss over Epochs')
-plt.legend()
-plt.show()
+def draw_graph_to_png(val_losses, train_losses, val_accuracies, train_accuracies, epochs, output_path):
+    # ...
+
+draw_graph_to_png(val_losses, train_losses, val_accuracies, train_accuracies, epochs, output_png_path)
+```
+Visualization and Saving Predictions: The trained model was used on test data to generate masked predictions of images. This stage visually demonstrates the impact of the model on real-world data.
+```python
+test_masked_path_list = glob.glob(os.path.join('data/masked_images', '*'))
+test_masked_path_list.sort()
+
+n_samples = 5
+visualize_and_save_predictions(test_input_path_list, test_label_path_list, test_masked_path_list, n_samples)
 ```
 
-
-<img width="875" alt="g3" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/fc93c6f2-28fb-4f98-8fe2-777b072a77d1">
-
-
-
-![g1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7708ceed-24ea-4ef6-82bc-8bf3bd479ab3)![g2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b60e0cc5-ad45-49a9-b77f-7ba3f1ba975e)
-
-<code>Final Epoch Results: Epoch 20 - Train Loss: 57.7545, Train Accuracy: 42394.1600, Validation Loss: 59.7178, Validation Accuracy: 40424.0200   </code>
+At this stage's conclusion, the trained model was used to make predictions on test data, resulting in "masked" images. These images showcase the areas the model identified as free space based on real-world data. This project addresses the problem of free space segmentation, demonstrating the foundational steps and how the neural network model is constructed and trained.
 
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/train.py">train.py</a>
