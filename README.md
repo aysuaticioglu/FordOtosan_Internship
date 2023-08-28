@@ -569,6 +569,31 @@ visualize_and_save_predictions(test_input_path_list, test_label_path_list, test_
 
 At this stage's conclusion, the trained model was used to make predictions on test data, resulting in "masked" images. These images showcase the areas the model identified as free space based on real-world data. This project addresses the problem of free space segmentation, demonstrating the foundational steps and how the neural network model is constructed and trained.
 
+<img width="1138" alt="epoch" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/20b7c31b-ff21-43e1-9480-dbab9ca6c81f">
+
+![loss_graph-2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/d149836f-f32a-4bb2-9351-29f18f34ad6e)
+
+
+
+
+![prediction_cfc_000234_75576fe22f704a23816456740bde3556](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/fde8f68e-de64-41fa-b5ee-426d2790e116)
+![prediction_cfc_000235_a1468fa636f9496aabbec371327890c3](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c1635028-d15c-43e3-a639-21e985217278)
+![prediction_cfc_000236_03a390ba28534f28a60a2d626f674103](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/af529e31-a75e-4e0f-8a6d-3413e4b2bd36)
+![prediction_cfc_000244_bf75244a4b09401580da886b35c340d6](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/6b8f8ba3-6d83-4b75-8809-51e73e6aff83)
+![prediction_cfc_000245_fa3c4302ca62471393518bb0df32b1c2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/d179940c-3463-4f4f-97d9-046768a3c0ce)
+![prediction_cfc_000246_c18d4001d69044e295e65591cf0cb574](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/51bfe6bf-0157-4b5a-bb41-14983e46406e)
+![prediction_cfc_000247_f5d4e0af272e4757b5b2c76a51692537](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/9c059080-4996-4f49-a710-b482a40d37c6)
+![prediction_cfc_000248_f6fdb1a2623546a7b1d344059618598e](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/125e19aa-ddcf-4677-b286-fdcfedac6b3b)
+![prediction_cfc_000249_38679c112bca4107ad224a6e7fc10c2e](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f54c87e5-5340-4cad-945a-44c70c0d1bcd)
+![prediction_cfc_000250_8e8d9b03802545a0bcac9b7d2b9578f1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/e86c9745-cf1d-44a8-b6db-1284ca5bba3e)
+![prediction_cfc_000251_d99c886d896745b7817ed667618a954e](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f3301cbd-f669-48bf-8366-846261697a19)
+![prediction_cfc_000252_bc4465e2f56b43d092575c4c6833b648](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4a74e318-a988-4363-91d6-c11f59721c9d)
+![prediction_cfc_000253_a7471156614d473db7fe9e5bee2ee247](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/e420b294-89e8-4afe-a8c0-d469c3a4a1a0)
+![prediction_cfc_000254_388a51e56525449796c6c07728494a51](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/3a84d685-8eb0-4f9f-81b0-c375da0b410f)
+![prediction_cfc_000260_c35cab7660c54d8e94c68bb776c04a7a](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/cde1d27e-9d8d-4111-9187-f205d969470b)
+
+
+
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/train.py">train.py</a>
 
