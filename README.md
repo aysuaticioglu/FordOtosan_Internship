@@ -339,8 +339,8 @@ Softmax, on the other hand, is an activation function typically used in the last
 
 <h3>Model</h3>
 
-<img width="300" alt="Adsız" src="(https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/a61a9168-fbef-40af-8f1b-e27bdc059da3">
 
+<img width="653" alt="unet" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/5468a22a-4e6b-4b6a-afe3-c01bb44c675e">
 
 
 In this project, the U-Net model was specifically employed. U-Net offers an ideal solution for semantic segmentation tasks and plays a central role in this project. Semantic segmentation is a crucial task that involves assigning each pixel in an image to a specific class. U-Net demonstrates excellent performance in such tasks and serves as a key component in this project.
