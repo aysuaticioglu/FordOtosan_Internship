@@ -571,7 +571,7 @@ At this stage's conclusion, the trained model was used to make predictions on te
 
 <img width="1138" alt="epoch" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/20b7c31b-ff21-43e1-9480-dbab9ca6c81f">
 
-![loss_graph-2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/d149836f-f32a-4bb2-9351-29f18f34ad6e)
+![loss_graph-3](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2fe665de-c827-436c-806a-698a62f1f4a4)
 
 
 ![cfc_000319_8039409c190c4c41837e344eab2081bc](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f1c58eaa-12b8-4cdc-819a-d7037747d572)
