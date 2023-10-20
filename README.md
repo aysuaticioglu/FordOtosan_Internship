@@ -338,6 +338,13 @@ An activation function is a mathematical operation applied to the output of each
 Softmax, on the other hand, is an activation function typically used in the last layer of a neural network, especially for classification problems with multiple classes. It represents the contribution of each class to the output as a probability distribution. This helps us identify which class is more likely to give the correct result. The main reason for using Softmax is to make the outputs meaningful and interpretable, aiding in selecting the most probable class.
 
 <h3>Model</h3>
+![u-net-architecture](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/020c38ea-b5ad-42c7-82ee-72f705b444c3)
+In this project, the U-Net model was specifically employed. U-Net offers an ideal solution for semantic segmentation tasks and plays a central role in this project. Semantic segmentation is a crucial task that involves assigning each pixel in an image to a specific class. U-Net demonstrates excellent performance in such tasks and serves as a key component in this project.
+
+One of the reasons for choosing U-Net in this project is its ability to achieve high success with limited training data. Furthermore, its lack of specific size requirements for input images makes it an ideal choice for use in this project.
+
+Thanks to the U-Net model within the project, successful pixel-based classification of images has been accomplished.
+
 
 In this code snippet, a neural network model for Free Space Segmentation has been defined using the PyTorch framework. The model consists of both encoder and decoder layers, designed to process input images and produce segmentation predictions.
 
