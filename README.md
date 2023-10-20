@@ -569,7 +569,7 @@ visualize_and_save_predictions(test_input_path_list, test_label_path_list, test_
 
 At this stage's conclusion, the trained model was used to make predictions on test data, resulting in "masked" images. These images showcase the areas the model identified as free space based on real-world data. This project addresses the problem of free space segmentation, demonstrating the foundational steps and how the neural network model is constructed and trained.
 
-<img width="1138" alt="epoch" src="https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/20b7c31b-ff21-43e1-9480-dbab9ca6c81f">
+
 
 ![loss_graph-3](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2fe665de-c827-436c-806a-698a62f1f4a4)
 
