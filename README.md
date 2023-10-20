@@ -1,4 +1,4 @@
-![cfc_004967_cb6e4648db3e40a9816de04ba47430f4-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/fb6da2fb-af04-425f-a53d-62835f28f3b2)![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/a92b3a12-58ce-4372-954a-130a19e31bfd)![cfc_004967_cb6e4648db3e40a9816de04ba47430f4](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4845a039-2410-4684-8220-145fc4677d39)![cfc_004988_caefea3ba99c4cc991626526603564e8](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/a51e0854-ff49-4ee5-9880-cadefdb9c679)![cfc_004967_cb6e4648db3e40a9816de04ba47430f4-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c53de1be-0828-4c0f-a219-16fd2ed816f7)![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f2fe4cf1-944f-45ed-86bb-2597e2fa422e)![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/054f1868-5d98-49c0-bd92-07001fc52656)![cfc_004967_cb6e4648db3e40a9816de04ba47430f4](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/6496e98a-5f26-4407-a084-aca40fd97514)# FordOtosan_Internship
+# FordOtosan_Internship
 <h1>Freespace Segmentation with Fully Convolutional Neural Network (FCNN)</h1>
 
 
@@ -613,14 +613,19 @@ aug_size = int(len(aug_mask_path_list) / 2)
 train_input_path_list = aug_path_list[:aug_size] + train_input_path_list + aug_path_list[aug_size:]
 train_label_path_list = aug_mask_path_list[:aug_size] + train_label_path_list + aug_mask_path_list[aug_size:]
 ```
-![cfc_004967_cb6e4648db3e40a9816de04ba47430f4-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/b51ad7e5-ba18-4347-8513-27688d655385)
-![Uploading cfc_004967_cb6e4648db3e40a9816de04ba47430f4.png…]()
-![Uploading cfc_004971_4b67d381a9ad4dce94083518d01a2cdd-1.png…]()
-![Uploading cfc_004971_4b67d381a9ad4dce94083518d01a2cdd.png…]()
-![Uploading cfc_004988_caefea3ba99c4cc991626526603564e8-1.png…]()
-![Uploading cfc_004988_caefea3ba99c4cc991626526603564e8.png…]()
-![Uploading cfc_004991_70288e9adf754878a1bc2011b7616c6b-1.png…]()
-x![Uploading cfc_004991_70288e9adf754878a1bc2011b7616c6b.png…]()
+![cfc_004967_cb6e4648db3e40a9816de04ba47430f4-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/42171616-a012-4cc1-bdd3-c1baa2af9c0f)
+![cfc_004967_cb6e4648db3e40a9816de04ba47430f4](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/866c3f25-6df9-4d3b-9fa2-bc9e2b726dd1)
+![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/20d0dbfe-014b-4471-b412-4d392d978299)
+![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/6522fe4c-6379-480d-bac1-f46fd6ce503c)
+![cfc_004988_caefea3ba99c4cc991626526603564e8-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/56511a42-8ba3-4f77-9ee4-68117beafc85)
+![cfc_004988_caefea3ba99c4cc991626526603564e8](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2b66b9b0-46b2-41f5-be18-3b069634d747)
+![cfc_004991_70288e9adf754878a1bc2011b7616c6b-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/22a98d03-6a76-4fb3-9e82-db8b3d0090fd)
+![cfc_004991_70288e9adf754878a1bc2011b7616c6b](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4962af63-2ebe-4603-bd2e-89f6e25109c4)
+
+
+
+
+
 
 
 
