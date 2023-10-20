@@ -338,7 +338,8 @@ An activation function is a mathematical operation applied to the output of each
 Softmax, on the other hand, is an activation function typically used in the last layer of a neural network, especially for classification problems with multiple classes. It represents the contribution of each class to the output as a probability distribution. This helps us identify which class is more likely to give the correct result. The main reason for using Softmax is to make the outputs meaningful and interpretable, aiding in selecting the most probable class.
 
 <h3>Model</h3>
-![image](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/a61a9168-fbef-40af-8f1b-e27bdc059da3)
+
+<img width="300" alt="Adsız" src="(https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/a61a9168-fbef-40af-8f1b-e27bdc059da3">
 
 
 
