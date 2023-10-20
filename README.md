@@ -592,8 +592,20 @@ visualize_and_save_predictions(test_input_path_list, test_label_path_list, test_
 
 At this stage's conclusion, the trained model was used to make predictions on test data, resulting in "masked" images. These images showcase the areas the model identified as free space based on real-world data. This project addresses the problem of free space segmentation, demonstrating the foundational steps and how the neural network model is constructed and trained.
 <h2>Data Augmentation</h2>  
-
-
+This piece of code helps you diversify your training data set using data amending methods. Data amputation is a common technique used to diversify the dataset in which your model is trained and help the model to generalize better.
+```python
+for image, mask in tqdm.tqdm(zip(train_input_path_list, train_label_path_list)):
+    if os.path.isfile(image) and os.path.isfile(mask):
+        img = Image.open(image)
+        msk = cv2.imread(mask)
+        color_aug = T.ColorJitter(brightness=0.4, contrast=0.4, hue=0.06)
+        img_aug = color_aug(img)
+        new_image_path = image[:-4] + "-1.png"
+        new_mask_path = mask[:-4] + "-1.png"
+        img_aug = np.array(img_aug)
+        cv2.imwrite(new_image_path, img_aug)
+        cv2.imwrite(new_mask_path, msk)
+```
 ![loss_graph-3](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2fe665de-c827-436c-806a-698a62f1f4a4)
 
 
