@@ -350,49 +350,64 @@ One of the reasons for choosing U-Net in this project is its ability to achieve 
 Thanks to the U-Net model within the project, successful pixel-based classification of images has been accomplished.
 
 
-In this code snippet, a neural network model for Free Space Segmentation has been defined using the PyTorch framework. The model consists of both encoder and decoder layers, designed to process input images and produce segmentation predictions.
+# U-Net for Image Segmentation
 
-<h4>Encoder Layers:</h4>  
-The encoder layers, denoted by self.encoder_conv1 and self.encoder_conv2, are convolutional layers responsible for extracting and emphasizing features from the input images. The first convolutional layer (self.encoder_conv1) processes the input data and transforms it into feature maps. Subsequently, the output of the first layer is further processed by the second convolutional layer (self.encoder_conv2) to extract more complex features.
+![Sample Output](sample_output.png)
 
-```python
+This repository contains an implementation of the U-Net architecture for image segmentation tasks. U-Net is a popular convolutional neural network (CNN) architecture that excels in tasks like semantic segmentation. In this project, we use the U-Net model to perform image segmentation, which involves classifying each pixel in an image into specific categories.
 
-x = self.encoder_conv1(x)  # Convolution operation
-x = F.relu(x)  # ReLU activation
+## U-Net Architecture
 
-x = self.encoder_conv2(x)  # Convolution operation
-x = F.relu(x)  # ReLU activation
-```  
-<h4>Decoder Layers:</h4>  
-The decoder layers, represented by self.decoder_conv1 and self.decoder_conv2, work in tandem with the encoder layers. The first decoder convolutional layer (self.decoder_conv1) aims to reconstruct the original features from the encoded representation. The second decoder convolutional layer (self.decoder_conv2) generates the final output, which includes class predictions.
+The U-Net model is characterized by its encoder-decoder architecture, which consists of the following components:
+
+### Encoder Layers
+
+The encoder layers are responsible for extracting essential features from the input image. This is achieved through a series of convolutional layers followed by ReLU activation functions. The code snippet below demonstrates the encoder layers in action:
 
 ```python
-x = self.decoder_conv1(x)  # Convolution operation
-x = F.relu(x)  # ReLU activation
-```  
+# Encoder Layers
+x = self.dconv_down1(x)
+x = self.maxpool(x)
 
-<h4>Activation Functions:</h4>  
-In between convolutional layers, Rectified Linear Unit (ReLU) activation functions are applied. ReLU enhances the visibility of features by transforming negative input values to zero, allowing positive values to propagate through. This activation process is crucial for the model's learning process and improving the quality of feature representations.
+x = self.dconv_down2(x)
+x = self.maxpool(x)
 
-```python
-x = F.relu(x)  # ReLU activation
-```  
-<h4>Sigmoid Activation for Binary Classification:</h4>  
-Following the decoder layers, a sigmoid activation function is applied (torch.sigmoid(x)) to the output. This is particularly useful for binary classification tasks, where the model's output is transformed into a probability score between 0 and 1, indicating the likelihood of the given class.
+x = self.dconv_down3(x)
+x = self.maxpool(x)
 
-```python
-x = torch.sigmoid(x)  # Apply sigmoid
-```  
-
-
-<h4>Upsample Layer:</h4>  
-The model includes an upsampling layer (self.upsample) that resizes the output back to the desired input size. This step is essential to match the original dimensions of the input image.
-
-```python
-x = self.upsample(x)  # Upsample
+x = self.dconv_down4(x)
 ```
-In conclusion, this code defines a neural network model designed for FreeSpace Segmentation, which involves extracting features using encoder layers, reconstructing original features using decoder layers, applying activation functions, and generating segmentation predictions.
+Decoder Layers
+The decoder layers aim to upsample the feature maps to the original image size and generate the segmentation output. The code snippet below illustrates how the decoder layers are implemented:
 
+```python
+# Decoder Layers
+x = self.upsample(x)
+x = torch.cat([x, conv3], dim=1)
+x = self.dconv_up3(x)
+
+x = self.upsample(x)
+x = torch.cat([x, conv2], dim=1)
+x = self.dconv_up2(x)
+
+x = self.upsample(x)
+x = torch.cat([x, conv1], dim=1)
+x = self.dconv_up1(x)
+```
+
+Activation Functions
+ReLU activation functions are applied to introduce non-linearity in the model and enhance feature representation. The following code snippet demonstrates the application of ReLU activation:
+
+```python
+x = F.relu(x)  # ReLU activation
+```
+Final Layer and Softmax
+The final layer is a 1x1 convolutional layer that outputs the segmentation predictions. A softmax activation is applied to obtain class probabilities for each pixel:
+
+```python
+x = self.conv_last(x)
+x = nn.Softmax(dim=1)(x)  # Apply softmax
+```
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/model.py">model.py</a>
 
