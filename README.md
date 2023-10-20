@@ -350,17 +350,14 @@ One of the reasons for choosing U-Net in this project is its ability to achieve 
 Thanks to the U-Net model within the project, successful pixel-based classification of images has been accomplished.
 
 
-# U-Net for Image Segmentation
-
-![Sample Output](sample_output.png)
-
+<h4>U-Net for Image Segmentation</h4>
 This repository contains an implementation of the U-Net architecture for image segmentation tasks. U-Net is a popular convolutional neural network (CNN) architecture that excels in tasks like semantic segmentation. In this project, we use the U-Net model to perform image segmentation, which involves classifying each pixel in an image into specific categories.
 
-## U-Net Architecture
+<h4>U-Net Architecture</h4>
 
 The U-Net model is characterized by its encoder-decoder architecture, which consists of the following components:
 
-### Encoder Layers
+<h4>Encoder Layers</h4>
 
 The encoder layers are responsible for extracting essential features from the input image. This is achieved through a series of convolutional layers followed by ReLU activation functions. The code snippet below demonstrates the encoder layers in action:
 
@@ -377,7 +374,7 @@ x = self.maxpool(x)
 
 x = self.dconv_down4(x)
 ```
-Decoder Layers
+<h4>Decoder Layers</h4>
 The decoder layers aim to upsample the feature maps to the original image size and generate the segmentation output. The code snippet below illustrates how the decoder layers are implemented:
 
 ```python
@@ -395,13 +392,13 @@ x = torch.cat([x, conv1], dim=1)
 x = self.dconv_up1(x)
 ```
 
-Activation Functions
+<h4>Activation Functions</h4>
 ReLU activation functions are applied to introduce non-linearity in the model and enhance feature representation. The following code snippet demonstrates the application of ReLU activation:
 
 ```python
 x = F.relu(x)  # ReLU activation
 ```
-Final Layer and Softmax
+<h4>Final Layer and Softmax</h4>
 The final layer is a 1x1 convolutional layer that outputs the segmentation predictions. A softmax activation is applied to obtain class probabilities for each pixel:
 
 ```python
