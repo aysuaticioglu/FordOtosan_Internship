@@ -617,10 +617,7 @@ train_label_path_list = aug_mask_path_list[:aug_size] + train_label_path_list + 
 ![cfc_004967_cb6e4648db3e40a9816de04ba47430f4](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/866c3f25-6df9-4d3b-9fa2-bc9e2b726dd1)
 ![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/20d0dbfe-014b-4471-b412-4d392d978299)
 ![cfc_004971_4b67d381a9ad4dce94083518d01a2cdd](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/6522fe4c-6379-480d-bac1-f46fd6ce503c)
-![cfc_004988_caefea3ba99c4cc991626526603564e8-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/56511a42-8ba3-4f77-9ee4-68117beafc85)
-![cfc_004988_caefea3ba99c4cc991626526603564e8](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2b66b9b0-46b2-41f5-be18-3b069634d747)
-![cfc_004991_70288e9adf754878a1bc2011b7616c6b-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/22a98d03-6a76-4fb3-9e82-db8b3d0090fd)
-![cfc_004991_70288e9adf754878a1bc2011b7616c6b](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4962af63-2ebe-4603-bd2e-89f6e25109c4)
+
 
 
 
@@ -634,18 +631,13 @@ train_label_path_list = aug_mask_path_list[:aug_size] + train_label_path_list + 
 ![cfc_000654_e53e3ac30962431394c83f9480b2ffe8](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/ef368d35-f517-45e2-82d1-f497c6899dec)
 ![cfc_000705_0b82f675c9ff449ea0677d2e3573eeae-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/185da872-6876-41e6-a593-b42903dca984)
 ![cfc_000705_0b82f675c9ff449ea0677d2e3573eeae](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4be2453f-41b7-4e97-9f67-2bf5529ba989)
-![cfc_000711_2ae7708eb5a447449cbf8070a51ca80a-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/8c242780-5abb-4720-be95-9b72d87fca0b)
-![cfc_000711_2ae7708eb5a447449cbf8070a51ca80a](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c889b34b-c7fa-4a7d-a6a4-e725fdc13946)
-![cfc_000736_dbcef6b41dcc403e9e154490dd07cbfd-1](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/c18d20fa-173f-424d-8c00-a019432c5a51)
-![cfc_000736_dbcef6b41dcc403e9e154490dd07cbfd](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/78b122b5-55fd-47e1-a9a1-154b0dc851b8)
 
 
 
 ![loss_graph-3](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/2fe665de-c827-436c-806a-698a62f1f4a4)
 
 
-![cfc_000319_8039409c190c4c41837e344eab2081bc](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f1c58eaa-12b8-4cdc-819a-d7037747d572)
-![cfc_000270_0e7b3eec7027449b8a8b7ac6b2354eed](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/4d38b04d-e1f2-49e4-a316-33cbcd9a0c5f)
+
 ![cfc_000257_71569acad2364cd5b5ca50878673b381](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/5299e50e-7940-4dc4-97e7-a185a18507b6)
 ![cfc_000255_f3b724c3232d41588e2eaa5074740d2e](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/f7520554-9836-4167-9ddb-8ef47b422e82)
 ![cfc_000251_d99c886d896745b7817ed667618a954e](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/7f35f3e2-7ac8-476b-a6d8-f041ba721250)
@@ -656,12 +648,8 @@ train_label_path_list = aug_mask_path_list[:aug_size] + train_label_path_list + 
 ![cfc_000528_6662fda3a78a431fbca9f4a070f95c00](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/9cb50dd7-561e-411d-b1ea-8ee0ee605ce9)
 ![cfc_000644_aaddadf2651b4c62a47b3f298996304d](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/338d21cd-7523-4748-96e1-803dfe80f570)
 ![cfc_000428_58468963ee944077ac3cfeb1b6c4d154](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/5c7a82a1-dc36-427a-a287-f0ca56ad81af)
-![cfc_000527_4f269e1ebbb34a258f120e22096a26ab](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/cd5afd92-515f-4f83-a9b7-6e592990eb2c)
-![cfc_000519_368ea596643941c1becb09c6b4d93b98](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/a309e849-103f-425f-84e4-dafa302c3d2c)
-![cfc_000644_aaddadf2651b4c62a47b3f298996304d](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/3f6e0cb8-4664-457a-8c36-a12fc9c6444a)
-![cfc_000567_00242aafb69d4fcf81d52b28bc96bce2](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/6584c115-5aed-421e-b40b-741846d044cb)
-![cfc_000742_4f1395c391f24b30a2904d84c012744f](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/6996fb7a-38b7-496e-96d4-1855514e76bd)
-![cfc_000736_dbcef6b41dcc403e9e154490dd07cbfd](https://github.com/aysuaticioglu/FordOtosan_Internship/assets/75265305/3aae399f-87c8-4521-bc8e-6a484f89ada5)
+
+
 
 
 
