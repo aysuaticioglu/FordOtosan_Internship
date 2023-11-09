@@ -608,24 +608,14 @@ aug_size = int(len(aug_mask_path_list) / 2)
 train_input_path_list = aug_path_list[:aug_size] + train_input_path_list + aug_path_list[aug_size:]
 train_label_path_list = aug_mask_path_list[:aug_size] + train_label_path_list + aug_mask_path_list[aug_size:]
 ```
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/19.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/20.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/21.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/22.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/23.png">
-<img alt="Adsız" " src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/24.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/19.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/20.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/21.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/22.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/23.png"><img alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/24.png">
 
 
 <img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/25.png">
 
 
 
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/26.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/27.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/28.png">
-<img alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/29.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/30.png">
-<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/31.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/26.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/27.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/28.png"><img alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/29.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/30.png"><img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/31.png">
 
 
 
