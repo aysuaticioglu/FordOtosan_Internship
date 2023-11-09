@@ -38,7 +38,7 @@ The classification task assigns input data to specific categories or classes.It 
 <h3>Compare segmentation and classification in NN.</h3>
 Segmentation focuses on identifying regions or objects within data, while classification assigns data to predefined classes or categories. Segmentation is more detailed and deals with complex data structures, while classification is a more general task with simpler output.
 <br>
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/5.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/5.png">
 
 
 <h3>What is data and dataset difference?</h3>
@@ -73,7 +73,7 @@ JSON files contain the exterior and interior point locations of the freespace (d
 Here's the JSON representation:
 
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/6.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/6.png">
 
 The masks are created using these exterior and interior points. Masks are black and white images representing pixels. Pixels belonging to the "Freespace" class are represented as white (e.g., pixel value 255), while other pixels are represented as black (e.g., pixel value 0). This is done using the information from the JSON files.
 
@@ -107,7 +107,7 @@ Codes to add to the image by coloring the pixels determined as empty space and w
 ```
 
 <h4>Mask on image example;</h4>
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/10.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/10.png">
 
 Here's the section with the codes;
 <a href="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/src/mask_on_image.py">mask_on_image.py</a>
@@ -127,7 +127,7 @@ For example, consider the relatively simple expression:
 
 This is how we would represent that function as as computational graph:
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/11.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/11.png">
 
 There are three input nodes, labeled X, Y, and Z. The two other nodes are function nodes. In a computational graph we generally compose many simple functions into a more complex function. We can do composition in mathematical notation as well, but I hope you’ll agree the following isn’t as clean as the graph above:
 
@@ -147,7 +147,7 @@ f(1, 2, 3) = 9</code>
 
 And in the graph, we use the output from each node as the weight of the corresponding edge:
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/12.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/12.png">
 
 
 
@@ -170,7 +170,7 @@ Tensors are widely used in areas like deep learning and artificial intelligence.
 In conclusion, Tensors are essential for representing data in different dimensions and structures and performing mathematical operations. They are widely used in various fields, from scientific calculations to artificial intelligence applications.
 ￼
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/13.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/13.png">
 
 
 <h4>What is one hot encoding?</h4>
@@ -185,7 +185,7 @@ For example, if we have three different color types: “red”, “green” and 
 This transformation allows machine learning models to process and classify categorical data more effectively. It also emphasizes that there is no inherent order or ranking among the categories.
 ￼
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/14.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/14.png">
 
 
 <h4>What is CUDA programming? Answer without detail.</h4>
@@ -266,7 +266,7 @@ Here's the section with the codes;
 <h2>Design Segmentation Model</h2>
 <h4>What is the difference between CNN and Fully CNN (FCNN) ?</h4>
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/15.png">
+<img alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/15.png">
 
 
 CNN (Convolutional Neural Network) and FCNN (Fully Convolutional Neural Network) are both types of neural networks commonly used for image analysis and other tasks. However, there are differences between the two in terms of architecture and applications.
@@ -323,7 +323,7 @@ A Convolutional Neural Network (CNN) typically consists of various types of laye
 These layers are typically stacked sequentially to form the architecture of a CNN. The specific arrangement and number of layers can vary based on the complexity of the task and design preferences. CNNs have demonstrated exceptional performance in visual tasks such as image classification, object detection, and image segmentation.
 
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/16.png">
+<img alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/16.png">
 
 
 <h4>What is activation function ? Why is softmax usually used in the last layer?</h4>
@@ -335,7 +335,7 @@ Softmax, on the other hand, is an activation function typically used in the last
 <h3>Model</h3>
 
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/17.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/17.png">
 
 
 In this project, the U-Net model was specifically employed. U-Net offers an ideal solution for semantic segmentation tasks and plays a central role in this project. Semantic segmentation is a crucial task that involves assigning each pixel in an image to a specific class. U-Net demonstrates excellent performance in such tasks and serves as a key component in this project.
@@ -485,7 +485,7 @@ In summary, Batch Gradient Descent processes the whole dataset, providing accura
 
 <h3>What is Backpropogation ? What is used for ?</h3>  
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/18.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/18.png">
 
 Backpropagation, a term derived from "backward propagation of errors," constitutes a core algorithm in training artificial neural networks. Its role is pivotal in guiding neural networks toward making accurate predictions by iteratively refining their internal parameters, namely weights and biases. The key mechanism behind backpropagation is the calculation of gradients for these parameters with respect to a chosen loss function.  
 
@@ -608,24 +608,24 @@ aug_size = int(len(aug_mask_path_list) / 2)
 train_input_path_list = aug_path_list[:aug_size] + train_input_path_list + aug_path_list[aug_size:]
 train_label_path_list = aug_mask_path_list[:aug_size] + train_label_path_list + aug_mask_path_list[aug_size:]
 ```
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/19.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/20.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/21.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/22.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/23.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/24.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/19.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/20.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/21.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/22.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/23.png">
+<img alt="Adsız" " src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/24.png">
 
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/25.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/25.png">
 
 
 
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/26.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/27.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/28.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/29.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/30.png">
-<img alt="Adsız" width="300" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/31.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/26.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/27.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/28.png">
+<img alt="Adsız" src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/29.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/30.png">
+<img alt="Adsız"  src="https://github.com/aysuaticioglu/FordOtosan_Internship/blob/main/img/31.png">
 
 
 
